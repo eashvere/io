@@ -10,13 +10,13 @@ swift_library(
     ],
     copts = [
         "-target",
-        "x86_64-apple-macosx10.14",
+        "arm64-apple-macos11.0",
     ],
     linkopts = [
         "-L/usr/lib/swift",
         "-Wl,-rpath,/usr/lib/swift",
         "-target",
-        "x86_64-apple-macosx10.14",
+        "arm64-apple-macos11.0",
     ],
     module_name = "audio_video",
     alwayslink = True,

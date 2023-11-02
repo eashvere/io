@@ -122,6 +122,8 @@ def write_config():
             # Stay with 10.14 for macOS
             bazel_rc.write('build:macos --copt="-mmacosx-version-min=10.14"\n')
             bazel_rc.write('build:macos --linkopt="-mmacosx-version-min=10.14"\n')
+            # XCode 15 deprecates unary and binary functions, re-enable them
+            bazel_rc.write('build:macos --copt="-D_LIBCPP_ENABLE_CXX17_REMOVED_UNARY_BINARY_FUNCTION"\n')
             # Warns for unguarded uses of Objective-C APIs
             bazel_rc.write("build:macos --copt=-Wunguarded-availability\n")
             bazel_rc.write("build:macos --copt=-Wno-error=unused-but-set-variable\n")

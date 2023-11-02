@@ -17,6 +17,7 @@ cc_binary(
     linkshared = 1,
     deps = [
         "//tensorflow_io/core:arrow_ops",
+        "//tensorflow_io/core:audio_video_ops",
         "//tensorflow_io/core:bigquery_ops",
         "//tensorflow_io/core:bigtable_ops",
         "//tensorflow_io/core:avro_ops",
@@ -49,7 +50,6 @@ cc_binary(
         "@bazel_tools//src/conditions:windows": [],
         "@bazel_tools//src/conditions:darwin_arm64": [],
         "//conditions:default": [
-            "//tensorflow_io/core:audio_video_ops",
             "//tensorflow_io/core:core_ops",
             "//tensorflow_io/core:elasticsearch_ops",
             "//tensorflow_io/core:optimization",
